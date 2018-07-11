@@ -1,13 +1,13 @@
 /*
     Program Name:   Seminole Weather Channel
-    Author: 
-    Date: 
+    Author: Brian Lorenz
+    Date: 1112 Pinecrest Drive
     Filename:   apixu_forecast.js
 */
 
 
- /*global $*/ 
- 
+/*global $*/
+
 /******************************************************CODE EXPLANATION!!!***********************************************/
 
 /*  Section #4:  AJAX code to send the HTTP Request, which is the location the user specifies, to the 
@@ -86,31 +86,43 @@
 
 /******************************************************INSERT YOUR CODE BELOW!!!***********************************************/
 
-        $(document).ready(function(){
-           $(':button').click(function(){
-                var message = 'q=' + $('#searchValue').val()+'&days=3';   
-                $.ajax({
-                      type: 'GET',
-                      url: 'https://api.apixu.com/v1/forecast.json?key=ADD_YOUR_API_KEY_HERE',
-                      data: message             
-                })
-                .done(function(json){
-                     $('#Location').html("<center>" + json.location.name + "</center>");
-                     $('#Region').html("<center>" + json.location.region + "</center>");
-                     $('#CurTemp').html("<center>" + json.current.temp_f + "</center>");
-                     $('#FeelsLike').html("<center>" + json.current.feelslike_f + "</center>");
-                     $('#Day1Low').html("<center>" + json.forecast.forecastday[0].day.mintemp_f + "</center>");
-                     $('#Day1High').html("<center>" + json.forecast.forecastday[0].day.maxtemp_f + "</center>");
-                     $('#Day2Low').html("<center>" + json.forecast.forecastday[1].day.mintemp_f + "</center>");
-                     $('#Day2High').html("<center>" + json.forecast.forecastday[1].day.maxtemp_f + "</center>");        
-
-                     
-                })
-                .fail(function() {
-                      alert("Posting failed.");              
-                });                    
-              return false;
-            });//end of submit
-        });//end of ready      
-
-
+$(document).ready(function() {
+    $(':button').click(function() {
+        var message = 'q=' + $('#searchValue').val() + '&days=10';
+        $.ajax({
+                type: 'GET',
+                url: 'https://api.apixu.com/v1/forecast.json?key=cf80c432d51041d5aa0142256180707',
+                data: message
+            })
+            .done(function(json) {
+                $('#Location').html("<center>" + json.location.name + "</center>");
+                $('#Region').html("<center>" + json.location.region + "</center>");
+                $('#CurTemp').html("<center>" + json.current.temp_f + "</center>");
+                $('#FeelsLike').html("<center>" + json.current.feelslike_f + "</center>");
+                $('#Day1Low').html("<center>" + json.forecast.forecastday[0].day.mintemp_f + "</center>");
+                $('#Day1High').html("<center>" + json.forecast.forecastday[0].day.maxtemp_f + "</center>");
+                $('#Day2Low').html("<center>" + json.forecast.forecastday[1].day.mintemp_f + "</center>");
+                $('#Day2High').html("<center>" + json.forecast.forecastday[1].day.maxtemp_f + "</center>");
+                $('#Day3Low').html("<center>" + json.forecast.forecastday[2].day.mintemp_f + "</center>");
+                $('#Day3High').html("<center>" + json.forecast.forecastday[2].day.maxtemp_f + "</center>");
+                $('#Day4Low').html("<center>" + json.forecast.forecastday[3].day.mintemp_f + "</center>");
+                $('#Day4High').html("<center>" + json.forecast.forecastday[3].day.maxtemp_f + "</center>");
+                $('#Day5Low').html("<center>" + json.forecast.forecastday[4].day.mintemp_f + "</center>");
+                $('#Day5High').html("<center>" + json.forecast.forecastday[4].day.maxtemp_f + "</center>");
+                $('#Day6Low').html("<center>" + json.forecast.forecastday[5].day.mintemp_f + "</center>");
+                $('#Day6High').html("<center>" + json.forecast.forecastday[5].day.maxtemp_f + "</center>");
+                $('#Day7Low').html("<center>" + json.forecast.forecastday[6].day.mintemp_f + "</center>");
+                $('#Day7High').html("<center>" + json.forecast.forecastday[6].day.maxtemp_f + "</center>");
+                $('#Day8low').html("<center>" + json.forecast.forecastday[7].day.maxtemp_f + "</center>");
+                $('#Day8High').html("<center>" + json.forecast.forecastday[7].day.maxtemp_f + "</center>");
+                $('#Day9Low').html("<center>" + json.forecast.forecastday[8].day.mintemp_f + "</center>");
+                $('#Day9High').html("<center>" + json.forecast.forecastday[8].day.maxtemp_f + "</center>");
+                $('#Day10Low').html("<center>" + json.forecast.forecastday[9].day.mintemp_f + "</center>");
+                $('#Day10High').html("<center>" + json.forecast.forecastday[9].day.maxtemp_f + "</center>");
+            })
+            .fail(function() {
+                alert("Posting failed.");
+            });
+        return false;
+    }); //end of submit
+}); //end of ready

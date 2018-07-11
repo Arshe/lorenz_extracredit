@@ -4,20 +4,19 @@
 Web Application Development
 
 ### Assignment Date:  
-(Month Day, Year)
+(July 11, 2018)
 
 ### Student Name:  
-(First and Last Name)
+(Brian Lorenz)
 
 ### Project Description:
-(In your own words, briefly describe the assignment.)
+(Use the Apixu API to allow a user to request current temperature and temperature forecast for a city.)
 
 ### View Project:
-(Replace this statement with your Github Page URL that was created when you 
- published the project.)
+(https://arshe.github.io/lorenz_extracredit/)
 
 ### Lessons Learned in the Assignment:
-1. (Briefly describe a lesson/concept learned in this lesson.)
-2. (Briefly describe a lesson/concept learned in this lesson.)
+1. (It is important to note that in some cases there may be a problem with the API and not my code.)
+2. (Using an API is an easy way to add fuctionality to an application.)
 3. (Briefly describe a lesson/concept learned in this lesson.)
 
